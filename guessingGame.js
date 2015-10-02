@@ -4,10 +4,12 @@ var one = document.getElementById('one');
 var two = document.getElementById('two');
 var three = document.getElementById('three');
 var correct = document.getElementById('correct');
+var questions = ['Is the sky blue?', 'Is Seattle awesome?', 'Is the answer to this question yes, or no?'];
+var answers = ['YES', 'Y', 'NO', 'N'];
 
 function ques1() {
-    var question1 = prompt('Is the sky blue?');
-    if (question1.toUpperCase() === 'YES' || question1.toUpperCase() === 'Y') {
+    var question1 = prompt(questions[0]);
+    if (question1.toUpperCase() === answers[0] || question1.toUpperCase() === answers[1]) {
         one.innerHTML = 'Correct ' + userName + '! the sky is blue!';
         counter ++
     } else {
@@ -17,8 +19,8 @@ function ques1() {
 }
 
 function ques2() {
-    var question2 = prompt('Is Seattle awesome?');
-    if (question2.toUpperCase() === 'YES' || question2.toUpperCase() === 'Y') {
+    var question2 = prompt(questions[1]);
+    if (question2.toUpperCase() === answers[0] || question2.toUpperCase() === answers[1]) {
         two.innerHTML = 'Correct ' + userName + '! Seatle is in fact awesome!';
         counter ++
     } else {
@@ -28,8 +30,8 @@ function ques2() {
 }
 
 function ques3() {
-    var question3 = prompt('Is the answer to this question yes, or no?');
-    if (question3.toUpperCase() === 'YES' || question3.toUpperCase() === 'Y') {
+    var question3 = prompt(questions[2]);
+    if (question3.toUpperCase() === answers[2] || question3.toUpperCase() === answers[3]) {
         three.innerHTML = 'Correct ' + userName + '! the answer is yes!';
         counter ++
     } else {
